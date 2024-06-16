@@ -1,0 +1,82 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+
+/* h1 {
+  font-size: 64px;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+} */
+
+.carousel-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Adjust gap as needed */
+}
+
+.carousel-container {
+  width: 300px;
+  height: 240px; /* Adjust height as needed */
+  overflow: hidden;
+  position: relative;
+  border: 2px solid #333;
+}
+
+.carousel {
+  position: absolute;
+  width: 100%;
+  animation-timing-function: linear;
+}
+
+.carousel-item {
+  height: 40px; /* Adjust item height as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+
+.left .carousel {
+  animation: scroll-up 10s linear infinite;
+}
+
+.right .carousel {
+  animation: scroll-down 10s linear infinite;
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+@keyframes scroll-up {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-50%); /* Adjust to ensure seamless scrolling */
+  }
+}
+
+@keyframes scroll-down {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0%); /* Adjust to ensure seamless scrolling */
+  }
+}
